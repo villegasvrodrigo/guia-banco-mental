@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Guía de inicio · Inversión Banco Mental</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg:#EEF2EF; --surface:#FFFFFF; --surface2:#F5F8F6; --ink:#1B3A2E; --muted:#56695F;
+    --line:#D5DFD8; --accent:#1F7A52; --accent-soft:#DCEDE4; --gold:#C98A22;
+    --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+    --body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1A15; --surface:#17261F; --surface2:#1E3028; --ink:#EAF2EC; --muted:#9DB3A6;
+      --line:#2B4237; --accent:#4FBF8B; --accent-soft:#1D3A2C; --gold:#F2A541; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1A15; --surface:#17261F; --surface2:#1E3028; --ink:#EAF2EC; --muted:#9DB3A6;
+    --line:#2B4237; --accent:#4FBF8B; --accent-soft:#1D3A2C; --gold:#F2A541; color-scheme: dark;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--body); font-size:16px; line-height:1.55;
+    padding-inline:20px; padding-block:40px 64px;
+  }
+  img{ max-width:100%; }
+  .wrap{ max-width:860px; margin:0 auto; display:grid; gap:40px; }
+  header{ display:grid; gap:14px; }
+  .eyebrow{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--muted); }
+  h1{ font-family:var(--display); font-weight:800; font-size:clamp(2rem,5vw,2.9rem); line-height:1.08; margin:0; text-wrap:balance; }
+  header p{ margin:0; color:var(--muted); max-width:62ch; }
+  .bars{ display:grid; grid-template-columns:repeat(8,1fr); gap:6px; max-width:360px; margin-top:4px; }
+  .bars span{ height:6px; border-radius:99px; background:var(--accent); }
+  .cta{
+    display:inline-block; margin-top:4px; justify-self:start;
+    background:var(--accent); color:#fff; text-decoration:none; font-weight:700;
+    padding:12px 22px; border-radius:999px;
+  }
+  :root[data-theme="dark"] .cta, :root:not([data-theme="light"]) .cta{ color:#0F1A15; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .cta{ color:#0F1A15; } }
+  .idea{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:22px 24px; display:grid; gap:10px;
+  }
+  .idea h2{ font-family:var(--display); font-weight:800; font-size:20px; margin:0; }
+  .idea p{ margin:0; color:var(--muted); }
+  .idea strong{ color:var(--ink); }
+  section.step{
+    display:grid; grid-template-columns:minmax(0,56px) minmax(0,1fr); gap:10px 20px;
+    align-items:start; padding-top:28px; border-top:1px solid var(--line);
+  }
+  .num{
+    font-family:var(--display); font-weight:800; font-size:40px; line-height:1;
+    color:var(--accent); font-variant-numeric:tabular-nums;
+  }
+  .body h2{ font-family:var(--display); font-weight:800; font-size:22px; line-height:1.2; margin:0 0 8px; text-wrap:balance; }
+  .body p{ margin:0 0 10px; }
+  .body p:last-child{ margin-bottom:0; }
+  .tip{
+    font-size:14px; color:var(--muted); background:var(--surface2);
+    border-left:3px solid var(--gold); border-radius:0 10px 10px 0; padding:10px 14px;
+  }
+  .tip b{ color:var(--ink); }
+  ul{ margin:0 0 10px; padding-left:20px; }
+  li{ margin-bottom:6px; }
+  .close{
+    background:var(--accent-soft); border-radius:16px; padding:24px;
+    display:grid; gap:10px;
+  }
+  .close h2{ font-family:var(--display); font-weight:800; font-size:22px; margin:0; }
+  .close p{ margin:0; }
+  footer{ color:var(--muted); font-size:14px; text-align:center; }
+  @media (max-width:560px){
+    section.step{ grid-template-columns:1fr; gap:4px; }
+    .num{ font-size:32px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Inversión Banco Mental · guía de inicio</div>
+    <h1>Bienvenido. Así arrancas tu Banco Mental</h1>
+    <div class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p>Tu pago quedó registrado y tu acceso ya está activo. Estos son los ocho pasos para empezar hoy mismo: toma unos cinco minutos la primera vez y menos de tres cada noche.</p>
+    <a class="cta" href="https://ibm.rodrigovillegasvilla.com">Abrir la app</a>
+  </header>
+
+  <div class="idea">
+    <h2>La idea en una frase</h2>
+    <p>Tu mente no distingue entre lo que ganas y lo que <strong>registras como valioso</strong>. El Banco Mental consiste en anotar cada noche lo que hiciste de valor, ponerle una cifra y firmarlo. Repetido día tras día, eso reprograma tu termostato interno de merecimiento.</p>
+    <p>La app solo hace una cosa: que ese registro diario sea fácil, constante y quede guardado.</p>
+  </div>
+
+  <section class="step">
+    <div class="num">1</div>
+    <div class="body">
+      <h2>Crea tu cuenta</h2>
+      <p>Entra a <strong>ibm.rodrigovillegasvilla.com</strong> y regístrate con tu correo y una contraseña. Usa <strong>el mismo correo con el que pagaste</strong>: así tu acceso queda activo de inmediato y no tienes que hacer nada más.</p>
+      <p class="tip"><b>Si no te deja entrar:</b> revisa que el correo sea exactamente el del pago y que no se haya colado un espacio al final. Si aun así no entra, escríbeme y lo reviso contigo.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">2</div>
+    <div class="body">
+      <h2>Define tu meta y firma tu contrato</h2>
+      <p>Tu meta es <strong>el doble de tu ingreso anual actual</strong>. Toma lo que ganaste el año pasado y multiplícalo por dos: esa es la cifra que vas a escribir en la sección <strong>Contrato</strong>.</p>
+      <p>No es un número al azar. El doble es suficientemente grande para obligarte a pensar distinto, y suficientemente cercano para que tu mente lo acepte como posible. Lee el contrato completo antes de firmarlo: no es un trámite, es el ancla de todo el proceso.</p>
+      <p class="tip"><b>Ejemplo:</b> si este año ganaste 600,000, tu meta es 1,200,000.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">3</div>
+    <div class="body">
+      <h2>Registra tu primer Evento de Valor</h2>
+      <p>Ve a <strong>Registro</strong> y anota algo valioso que hiciste hoy, con la cantidad que te pagas por ello. Un Evento de Valor es cualquier acción que te acerque a la persona que estás construyendo: una llamada difícil, una hora de estudio, entrenar, resolver un pendiente que llevabas semanas evitando.</p>
+      <p>Tienes dos formas de ponerle precio, y las puedes combinar:</p>
+      <ul>
+        <li><strong>Tarifa fija:</strong> le asignas una cantidad a la acción completa. Por ejemplo, 500 por hacer esa llamada que llevabas días posponiendo.</li>
+        <li><strong>Tarifa por hora:</strong> defines cuánto vale tu hora y multiplicas. Si tu hora vale 1,000 y estudiaste dos horas, registras 2,000.</li>
+      </ul>
+      <p class="tip"><b>Lo más importante del método:</b> cuentan las acciones, no los resultados. Si hiciste la llamada, cuenta, aunque te hayan dicho que no.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">4</div>
+    <div class="body">
+      <h2>Anota tus Ingresos Reales</h2>
+      <p>Aquí va el dinero que de verdad entró hoy: tu sueldo, una venta, un pago que te cayó. Cada cantidad que anotas es evidencia concreta de que ya estás recibiendo, y eso es justo lo que quieres que tu mente registre antes de dormir.</p>
+      <p class="tip"><b>Por pequeño que sea, anótalo.</b> Lo que importa es la evidencia acumulada, no el tamaño de cada entrada.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">5</div>
+    <div class="body">
+      <h2>Captura los Sucesos del día</h2>
+      <p>Son los hechos que jugaron a tu favor y que no dependieron de una acción tuya: una oportunidad que apareció, una llamada que te buscó, un encuentro, una buena noticia. Es tu registro diario de todo lo que se está moviendo a tu favor.</p>
+      <p class="tip"><b>Si el día estuvo difícil,</b> escribe lo que sí rescataste. Estás cerrando el día, y lo último que anotas es lo que tu mente se lleva a dormir.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">6</div>
+    <div class="body">
+      <h2>Escribe tus Afirmaciones</h2>
+      <p>Cierra escribiendo en presente y en primera persona quién eres a partir de hoy. No es pensamiento positivo: es darle a tu mente la instrucción con la que va a trabajar mientras duermes.</p>
+      <p class="tip"><b>Fórmula sencilla:</b> «Yo soy…» o «Yo merezco…», siempre en presente y en afirmativo. Nunca escribas lo que no quieres.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">7</div>
+    <div class="body">
+      <h2>Firma tu día</h2>
+      <p>Este es el paso que no se salta. Al firmar, el día se cierra y el saldo se suma a tu balance acumulado. La firma es el gesto que convierte el ejercicio en un compromiso real: tu mente registra que tú validaste tu propio valor.</p>
+      <p class="tip"><b>Hazlo en la noche,</b> antes de dormir. Es cuando el registro trabaja mejor.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="num">8</div>
+    <div class="body">
+      <h2>Revisa tu Historial y activa tus recordatorios</h2>
+      <p>En <strong>Historial</strong> ves todos tus días firmados y cómo crece tu saldo. Vuelve ahí cada semana: ver la suma acumulada es parte del efecto.</p>
+      <p>En <strong>Notificaciones</strong> enciendes el correo diario que te recuerda hacer tu registro, con una frase para cerrar el día.</p>
+      <p class="tip"><b>Importante:</b> busca el primer recordatorio en tu bandeja y, si cayó en Spam, márcalo como correo deseado y agrega el remitente a tus contactos. Así los siguientes llegan bien.</p>
+    </div>
+  </section>
+
+  <div class="close">
+    <h2>Lo único que tienes que recordar</h2>
+    <p>Entra cada noche, registra tu día y fírmalo. Nada más. La constancia es la que mueve el saldo, no la perfección: si se te va un día, retomas al siguiente sin castigarte.</p>
+    <p>Nos vemos en el registro de hoy.</p>
+  </div>
+
+  <footer>Inversión Banco Mental · Rodrigo Villegas</footer>
+
+</div>
+</body>
+</html>
